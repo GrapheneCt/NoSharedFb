@@ -51,7 +51,7 @@ int module_start(SceSize argc, const void *args) {
 		return SCE_KERNEL_START_FAILED;
 	}
 
-	//BNE -> BQE
+	//BNE -> BEQ
 	taiInjectData(info.modid, 0x00, offset, "\xD0", 0x01);
 
 	return SCE_KERNEL_START_SUCCESS;
